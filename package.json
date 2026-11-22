@@ -1,0 +1,27 @@
+{
+  "name": "@tapisvert/connect4",
+  "version": "0.1.0",
+  "description": "Connect 4 for the tapis engine, with a terminal client",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/src/game.js",
+  "bin": { "connect4": "dist/src/cli.js" },
+  "files": ["dist/src", "src"],
+  "engines": { "node": ">=22.18" },
+  "scripts": {
+    "build": "tsc -p .",
+    "check": "tsc -p . --noEmit",
+    "test": "node --test test/*.test.ts",
+    "prepare": "tsc -p .",
+    "host": "node src/cli.ts host",
+    "play": "node src/cli.ts play"
+  },
+  "repository": { "type": "git", "url": "git+https://github.com/tapisvert/connect4.git" },
+  "dependencies": {
+    "@tapisvert/tapis": "github:tapisvert/tapis"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.8.0"
+  }
+}
